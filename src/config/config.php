@@ -1,8 +1,9 @@
 <?php
 
-namespace Voyager\Config;
+namespace Config;
+use PDO;
 
-class DBConnexion
+class config
 {
     private $db_host = "localhost";
     private $db_user = 'root';

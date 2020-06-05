@@ -1,9 +1,14 @@
 <?php
 
-use Voyager\Config\DBConnexion;
+require __DIR__ . '/../../vendor/autoload.php';
 
-$connection = new DBConnexion();
+use Config\config;
 
-$PDO = $connection->connect();
+$connexion = new config();
 
-var_dump($PDO);
+try {
+    $pdo = $connexion->connect();
+    var_dump($pdo);
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
