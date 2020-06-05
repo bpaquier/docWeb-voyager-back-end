@@ -1,0 +1,11 @@
+{
+    "name": "work-in-progress/doc-web-voyager-back-end",
+    "description": "Back-end for Voyager web documentary",
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Voyager\\": "src/"
+        }
+    }
+}
