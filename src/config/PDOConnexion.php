@@ -3,7 +3,7 @@
 namespace Config;
 use PDO;
 
-class config
+class PDOConnexion
 {
     private $db_host = "localhost";
     private $db_user = 'root';
