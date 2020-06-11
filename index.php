@@ -62,7 +62,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
-        return $response
+        return $response;
     })->setName('journey');
 });
 
