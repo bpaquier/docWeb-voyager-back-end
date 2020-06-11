@@ -23,11 +23,6 @@ $app->get('/', function (Request $request, Response $response) {
     return $response;
 })->setName('Home1');
 
-$app->get('/test', function (Request $request, Response $response) {
-    $response->getBody()->write("TEST");
-    return $response;
-})->setName('test');
-
 $app->group('/query', function (RouteCollectorProxy $group){
 
     $group->get('/visual_content', function(Request $request, Response $response) {
@@ -46,7 +41,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         return $response;
     });
 
-    $group->get('/how_to_use_it', function(Request $request, Response $response) {
+    $group->get('/howToUse', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('how_to_use_it');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
