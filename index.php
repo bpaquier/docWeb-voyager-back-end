@@ -19,7 +19,7 @@ if ($_SERVER['SERVER_NAME'] === 'localhost'){
 }
 
 $app->get('/', function (Request $request, Response $response) {
-    $response->getBody()->write("voyager");
+    $response->getBody()->write("voyager1");
     return $response;
 })->setName('Home1');
 
@@ -35,14 +35,6 @@ $app->group('/query', function (RouteCollectorProxy $group){
 
     $group->get('/the_journey', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('the_journey');
-        $SqlConnexion->dbConnection();
-        $data = $SqlConnexion->returnResponse();
-        $response->getBody()->write($data);
-        return $response;
-    });
-
-    $group->get('/how_use', function(Request $request, Response $response) {
-        $SqlConnexion = new GetEntireTable('how_to_use_it');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
