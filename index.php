@@ -58,13 +58,11 @@ $app->group('/query', function (RouteCollectorProxy $group){
     })->setName('How-to-use-it');*/
 
     $group->get('/journey', function(Request $request, Response $response) {
-        $response->getBody()->write('hello');
-        return $response;
-        /*$SqlConnexion = new GetEntireTable('the_journey');
+        $SqlConnexion = new GetEntireTable('the_journey');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
-        return $response;*/
+        return $response;
     })->setName('journey');
 });
 
