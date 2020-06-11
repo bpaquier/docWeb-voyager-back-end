@@ -1,3 +1,5 @@
+
+DROP TABLE visual_content IF EXISTS;
 CREATE TABLE visual_content (
 	id INT(3) NOT NULL AUTO_INCREMENT,
   src TEXT NOT NULL,
@@ -127,6 +129,7 @@ INSERT INTO visual_content (src) VALUES
 ("https://github.com/bastien17-dev/docWeb-voyager-back-end/blob/master/assets/voyagerImg/images-golden-record-voyager-46-min.jpg?raw=true"),
 ("https://github.com/bastien17-dev/docWeb-voyager-back-end/blob/master/assets/voyagerImg/images-golden-record-voyager-45.jpg?raw=true")
 
+DROP TABLE how_to_use_it IF EXISTS;
 CREATE TABLE `custom-cwxn`.`how_to_use_it` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `symbol` VARCHAR(255) NOT NULL,
@@ -149,6 +152,8 @@ INSERT INTO `custom-cwxn`.`how_to_use_it` (`id`,`symbol`, `title`, `text_1`, `te
 
 INSERT INTO `custom-cwxn`.`how_to_use_it` (`id`,`symbol`, `title`, `text_1`, `text_2`) VALUES ('', 'hydrogen', 'The Key', 'This shema represents the tilting of the spin and the nucleus of hydrogen.', 'During this switchover, the hydrogen atom emits a wave of 0.7 nanoseconds. This figure is the key to deciphering the rest of the schemes.');
 
+
+DROP TABLE polaroids IF EXISTS;
 CREATE TABLE `custom-cwxn`.`polaroids` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NULL,
@@ -167,6 +172,7 @@ INSERT INTO `custom-cwxn`.`polaroids` (`id`,`title`, `text_1`, 'text_2') VALUES 
 
 INSERT INTO `custom-cwxn`.`polaroids` (`id`,`title`, `text_1`, 'text_2') VALUES ('', 'frank-drake', 'Ipsum', 'Ipsum lorem', 'Ipsum lorem');
 
+DROP TABLE audio_content IF EXISTS;
 CREATE TABLE `custom-cwxn`.`audio_content` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `src` VARCHAR(255) NOT NULL,
@@ -174,6 +180,9 @@ CREATE TABLE `custom-cwxn`.`audio_content` (
   `name` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))ENGINE=InnoDB;
 
+
+
+DROP TABLE the_journey IF EXISTS;
 CREATE TABLE `custom-cwxn`.`the_journey` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `text_1` VARCHAR(255) NOT NULL,
