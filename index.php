@@ -61,7 +61,6 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $SqlConnexion = new GetEntireTable('journey');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
-        //var_dump($data);
         $response->getBody()->write($data);
         return $response;
     })->setName('journey');
