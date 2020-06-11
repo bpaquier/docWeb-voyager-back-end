@@ -1,6 +1,7 @@
 <?php
 
-namespace Routes;
+
+namespace Config;
 
 require __DIR__ . '/../../vendor/autoload.php';
 
@@ -8,41 +9,35 @@ use Config\PDOConnexion;
 use Config\dataBaseConnexion;
 use PDO;
 
-class getUserById implements dataBaseConnexion
+class GetEntireTable implements dataBaseConnexion
 {
 
-    private $id;
+    private string $table;
     private $pdo;
-    private $sql;
 
-    public function __construct(int $id)
+    public function __construct(string $table)
     {
-    $this->id = $id;
+        $this->table = $table;
     }
 
     public function dbConnection()
     {
-        $db = new PDOConnexion();
-        $this->pdo = $db->connect();
-    }
-
-    public function setSqlRequest()
-    {
-        $this->sql = "SELECT * FROM users WHERE id_employes = :id";
+        $pdoConnection = new PDOConnexion();
+        $this->pdo = $pdoConnection->connect();
     }
 
     public function returnResponse()
     {
         $pdo = $this->pdo;
         try {
-            $stmt = $pdo->prepare($this->sql);
+            $stmt = $pdo->prepare("SELECT * FROM :table");
             $stmt->execute([
-                'id' => $this->id
+                'table' => $this->table
             ]);
             $response = $stmt->fetch(PDO::FETCH_ASSOC);
             return json_encode($response) ?: null;
         } catch (Exception $e) {
             return 'DB connection error' . $e.getMessage();
         }
-    }
+}
 }
