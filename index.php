@@ -19,7 +19,7 @@ if ($_SERVER['SERVER_NAME'] === 'localhost'){
 }
 
 $app->get('/', function (Request $request, Response $response) {
-    $response->getBody()->write("voyager1");
+    $response->getBody()->write("voyager2");
     return $response;
 })->setName('Home1');
 
@@ -57,14 +57,13 @@ $app->group('/query', function (RouteCollectorProxy $group){
         return $response;
     });
 
-    /*$group->get('/user/{id:[0-9]+}', function(Request $request, Response $response, $id) {
-        $user = new getUserById($id);
-        $user->dbConnection();
-        $user->setSqlRequest();
-        $data = $user->returnResponse();
+    $group->get('/how_use', function(Request $request, Response $response) {
+        $SqlConnexion = new GetEntireTable('audio_content');
+        $SqlConnexion->dbConnection();
+        $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
         return $response;
-    });*/
+    });
 });
 
 $app->run();
