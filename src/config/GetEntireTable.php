@@ -30,16 +30,17 @@ class GetEntireTable implements dataBaseConnexion
 
     public function returnResponse()
     {
-        $pdo = $this->pdo;
+        echo $this->table;
+        /*$pdo = $this->pdo;
         try {
             $stmt = $pdo->prepare("SELECT * FROM :table");
             $stmt->execute([
-                'table' => $this->table
+                "table" => $this->table
             ]);
             $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return json_encode($response) ?: null;
         } catch (Exception $e) {
             return 'DB connection error' . $e.getMessage();
-        }
+        }*/
 }
 }
