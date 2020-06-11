@@ -19,7 +19,7 @@ if ($_SERVER['SERVER_NAME'] === 'localhost'){
 }
 
 $app->get('/', function (Request $request, Response $response) {
-    $response->getBody()->write("Hello world!6");
+    $response->getBody()->write("voyager");
     return $response;
 })->setName('Home1');
 
@@ -41,7 +41,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         return $response;
     });
 
-    $group->get('/howToUse', function(Request $request, Response $response) {
+    $group->get('/how_use', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('how_to_use_it');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
