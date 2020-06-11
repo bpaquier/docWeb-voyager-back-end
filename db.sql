@@ -182,11 +182,12 @@ CREATE TABLE `custom-cwxn`.`audio_content` (
 
 
 
-DROP TABLE IF EXISTS the_journey;
-CREATE TABLE `custom-cwxn`.`the_journey` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `text_1` VARCHAR(255) NOT NULL,
-  `text_2` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`id`))ENGINE=InnoDB;
+DROP TABLE IF EXISTS journey;
+CREATE TABLE journey (
+	id INT(3) NOT NULL AUTO_INCREMENT,
+    text1 varchar(255) NOT NULL,
+    text2 varchar(255) NOT NULL,
+	PRIMARY KEY (id)
+) ENGINE=InnoDB ;
 
-INSERT INTO `custom-cwxn`.`the_journey` (`id`,`text_1`, `text_2`) VALUES ('', 'NASA placed an amibitous message aboard Voyager 1 and 2, a kind of time capsule, intended to communicate a story of our world to extraterrestrials.','It is carried by a phonograph record, a gold-plated copper disk called “The Golden Record“ containing what’s supposed to be the portray of the diversity of life and culture on Earth.');
+INSERT INTO journey (`id`,`text_1`, `text_2`) VALUES ('', 'NASA placed an amibitous message aboard Voyager 1 and 2, a kind of time capsule, intended to communicate a story of our world to extraterrestrials.','It is carried by a phonograph record, a gold-plated copper disk called “The Golden Record“ containing what’s supposed to be the portray of the diversity of life and culture on Earth.');
