@@ -25,7 +25,7 @@ $app->get('/', function (Request $request, Response $response) {
 
 $app->group('/query', function (RouteCollectorProxy $group){
 
-    /*$group->get('/visual_content', function(Request $request, Response $response) {
+    $group->get('/visual_content', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('visual_content');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
@@ -55,12 +55,13 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
         return $response;
-    })->setName('How-to-use-it');*/
+    })->setName('How-to-use-it');
 
-    $group->get('/{table}', function(Request $request, Response $response, $table) {
-        $SqlConnexion = new GetEntireTable($table);
+    $group->get('/journey', function(Request $request, Response $response, $table) {
+        $SqlConnexion = new GetEntireTable('journey');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
+        var_dump($data);
         $response->getBody()->write($data);
         return $response;
     })->setName('journey');
