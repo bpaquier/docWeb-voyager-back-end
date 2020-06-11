@@ -33,14 +33,6 @@ $app->group('/query', function (RouteCollectorProxy $group){
         return $response;
     })->setName('visual_content');
 
-    $group->get('/the_journey', function(Request $request, Response $response) {
-        $SqlConnexion = new GetEntireTable('the_journey');
-        $SqlConnexion->dbConnection();
-        $data = $SqlConnexion->returnResponse();
-        $response->getBody()->write($data);
-        return $response;
-    })->setName('journey');
-
     $group->get('/polaroids', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('polaroids');
         $SqlConnexion->dbConnection();
