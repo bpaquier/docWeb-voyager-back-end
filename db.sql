@@ -1,5 +1,5 @@
 
-DROP TABLE visual_content IF EXISTS;
+DROP TABLE IF EXISTS visual_content;
 CREATE TABLE visual_content (
 	id INT(3) NOT NULL AUTO_INCREMENT,
   src TEXT NOT NULL,
@@ -127,9 +127,9 @@ INSERT INTO visual_content (src) VALUES
 ("https://github.com/bastien17-dev/docWeb-voyager-back-end/blob/master/assets/voyagerImg/images-golden-record-voyager-48-min.jpg?raw=true"),
 ("https://github.com/bastien17-dev/docWeb-voyager-back-end/blob/master/assets/voyagerImg/images-golden-record-voyager-47-min.jpg?raw=true"),
 ("https://github.com/bastien17-dev/docWeb-voyager-back-end/blob/master/assets/voyagerImg/images-golden-record-voyager-46-min.jpg?raw=true"),
-("https://github.com/bastien17-dev/docWeb-voyager-back-end/blob/master/assets/voyagerImg/images-golden-record-voyager-45.jpg?raw=true")
+("https://github.com/bastien17-dev/docWeb-voyager-back-end/blob/master/assets/voyagerImg/images-golden-record-voyager-45.jpg?raw=true");
 
-DROP TABLE how_to_use_it IF EXISTS;
+DROP TABLE IF EXISTS how_to_use_it;
 CREATE TABLE `custom-cwxn`.`how_to_use_it` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `symbol` VARCHAR(255) NOT NULL,
@@ -153,7 +153,7 @@ INSERT INTO `custom-cwxn`.`how_to_use_it` (`id`,`symbol`, `title`, `text_1`, `te
 INSERT INTO `custom-cwxn`.`how_to_use_it` (`id`,`symbol`, `title`, `text_1`, `text_2`) VALUES ('', 'hydrogen', 'The Key', 'This shema represents the tilting of the spin and the nucleus of hydrogen.', 'During this switchover, the hydrogen atom emits a wave of 0.7 nanoseconds. This figure is the key to deciphering the rest of the schemes.');
 
 
-DROP TABLE polaroids IF EXISTS;
+DROP TABLE IF EXISTS polaroids;
 CREATE TABLE `custom-cwxn`.`polaroids` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NULL,
@@ -162,17 +162,17 @@ CREATE TABLE `custom-cwxn`.`polaroids` (
   `text_2` VARCHAR(255) NULL,
   PRIMARY KEY (`id`))ENGINE=InnoDB;
 
-INSERT INTO `custom-cwxn`.`polaroids` (`id`,`title`, `text_1`, 'text_2') VALUES ('', 'ann-druyan', 'Lorem', 'Lorem ipsum', 'Lorem ipsum');
+INSERT INTO `custom-cwxn`.`polaroids` (`id`,`name`,`title`, `text_1`, `text_2`) VALUES ('', 'ann-druyan', 'Lorem', 'Lorem ipsum', 'Lorem');
 
-INSERT INTO `custom-cwxn`.`polaroids` (`id`,`title`, `text_1`, 'text_2') VALUES ('','carl-sagan', 'Chairman of the committee', 'He was an American astronomer, planetary scientist, cosmologist, astrophysicist, astrobiologist, author, science popularizer, and science communicator.','He is best known as a science popularizer and communicator.','His best known scientific contribution is research on extraterrestrial life, including experimental demonstration of the production of amino acids from basic chemicals by radiation. Sagan assembled the first physical messages sent into space: the Pioneer plaque and the Voyager Golden Record, universal messages that could potentially be understood by any extraterrestrial intelligence that might find them.');
+INSERT INTO `custom-cwxn`.`polaroids` (`id`,`name`,`title`, `text_1`, `text_2`) VALUES ('', 'carl-sagan', 'Chairman of the committee', 'He was an American astronomer, planetary scientist, cosmologist, astrophysicist, astrobiologist, author, science popularizer, and science communicator. He is best known as a science popularizer and communicator.','His best known scientific contribution is research on extraterrestrial life, including experimental demonstration of the production of amino acids from basic chemicals by radiation. Sagan assembled the first physical messages sent into space: the Pioneer plaque and the Voyager Golden Record, universal messages that could potentially be understood by any extraterrestrial intelligence that might find them.');
 
-INSERT INTO `custom-cwxn`.`polaroids` (`id`,`title`, `text_1`, 'text_2') VALUES ('', 'eward-c-stone', 'Ipsum', 'Ipsum lorem', 'Ipsum lorem');
+INSERT INTO `custom-cwxn`.`polaroids` (`id`,`name`,`title`, `text_1`, `text_2`) VALUES ('', 'eward-c-stone', 'Ipsum', 'Ipsum lorem', 'Ipsum lorem');
 
-INSERT INTO `custom-cwxn`.`polaroids` (`id`,`title`, `text_1`, 'text_2') VALUES ('', 'jon-lomberg', 'Ipsum', 'Ipsum lorem', 'Ipsum ipsum ipsum lorem lorem');
+INSERT INTO `custom-cwxn`.`polaroids` (`id`,`name`, `title`, `text_1`, `text_2`) VALUES ('', 'jon-lomberg', 'Ipsum', 'Ipsum lorem', 'Ipsum ipsum ipsum lorem lorem');
 
-INSERT INTO `custom-cwxn`.`polaroids` (`id`,`title`, `text_1`, 'text_2') VALUES ('', 'frank-drake', 'Ipsum', 'Ipsum lorem', 'Ipsum lorem');
+INSERT INTO `custom-cwxn`.`polaroids` (`id`,`name`, `title`, `text_1`, `text_2`) VALUES ('', 'frank-drake', 'Ipsum', 'Ipsum lorem', 'Ipsum lorem');
 
-DROP TABLE audio_content IF EXISTS;
+DROP TABLE IF EXISTS audio_content;
 CREATE TABLE `custom-cwxn`.`audio_content` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `src` VARCHAR(255) NOT NULL,
@@ -182,7 +182,7 @@ CREATE TABLE `custom-cwxn`.`audio_content` (
 
 
 
-DROP TABLE the_journey IF EXISTS;
+DROP TABLE IF EXISTS the_journey;
 CREATE TABLE `custom-cwxn`.`the_journey` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `text_1` VARCHAR(255) NOT NULL,
