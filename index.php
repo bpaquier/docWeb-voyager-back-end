@@ -37,6 +37,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $response->getBody()->write($data);
         return $response;
     });
+
     $group->get('/the_journey', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('the_journey');
         $SqlConnexion->dbConnection();
@@ -44,6 +45,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $response->getBody()->write($data);
         return $response;
     });
+
     $group->get('/how_to_use_it', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('how_to_use_it');
         $SqlConnexion->dbConnection();
@@ -51,6 +53,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $response->getBody()->write($data);
         return $response;
     });
+
     $group->get('/polaroids', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('polaroids');
         $SqlConnexion->dbConnection();
@@ -58,6 +61,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $response->getBody()->write($data);
         return $response;
     });
+
     $group->get('/audio_content', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('audio_content');
         $SqlConnexion->dbConnection();
