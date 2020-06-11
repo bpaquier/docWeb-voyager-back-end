@@ -21,7 +21,7 @@ if ($_SERVER['SERVER_NAME'] === 'localhost'){
 $app->get('/', function (Request $request, Response $response) {
     $response->getBody()->write("Hello world!");
     return $response;
-})->setName('Home');
+})->setName('Home1');
 
 $app->get('/test', function (Request $request, Response $response) {
     $response->getBody()->write("TEST");
