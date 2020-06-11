@@ -58,7 +58,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
     });
 
     $group->get('/how_use', function(Request $request, Response $response) {
-        $SqlConnexion = new GetEntireTable('audio_content');
+        $SqlConnexion = new GetEntireTable('how_to_use_it');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
