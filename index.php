@@ -21,7 +21,7 @@ if ($_SERVER['SERVER_NAME'] === 'localhost'){
 $app->get('/', function (Request $request, Response $response) {
     $response->getBody()->write("voyager2");
     return $response;
-})->setName('Home1');
+})->setName('Home');
 
 $app->group('/query', function (RouteCollectorProxy $group){
 
@@ -31,7 +31,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
         return $response;
-    });
+    })->setName('visual_content');
 
     $group->get('/the_journey', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('the_journey');
@@ -39,7 +39,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
         return $response;
-    });
+    })->setName('journey');
 
     $group->get('/polaroids', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('polaroids');
@@ -47,7 +47,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
         return $response;
-    });
+    })->setName('pola');
 
     $group->get('/audio_content', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('audio_content');
@@ -55,7 +55,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
         return $response;
-    });
+    })->setName('audio_content');
 
     $group->get('/how_use', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('how_to_use_it');
@@ -63,7 +63,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
         return $response;
-    });
+    })->setName('How-to-use-it');
 });
 
 $app->run();
