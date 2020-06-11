@@ -1,6 +1,6 @@
 <?php
 
-use Config\GetEntireTable as GetEntireTableAlias;
+use Config\GetEntireTable;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
@@ -31,7 +31,7 @@ $app->get('/test', function (Request $request, Response $response) {
 $app->group('/query', function (RouteCollectorProxy $group){
 
     $group->get('/visual_content', function(Request $request, Response $response) {
-        $SqlConnexion = new GetEntireTableAlias('visual_content');
+        $SqlConnexion = new GetEntireTable('visual_content');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
