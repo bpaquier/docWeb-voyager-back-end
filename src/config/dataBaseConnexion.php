@@ -8,7 +8,5 @@ interface dataBaseConnexion
 {
     public function dbConnection();
 
-    public function setSqlRequest();
-
     public function returnResponse();
 }
