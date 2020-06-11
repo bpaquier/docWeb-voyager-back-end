@@ -57,8 +57,8 @@ $app->group('/query', function (RouteCollectorProxy $group){
         return $response;
     })->setName('How-to-use-it');*/
 
-    $group->get('/journey', function(Request $request, Response $response) {
-        $SqlConnexion = new GetEntireTable('how_to_use_it');
+    $group->get('/{table}', function(Request $request, Response $response, $table) {
+        $SqlConnexion = new GetEntireTable($table);
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
