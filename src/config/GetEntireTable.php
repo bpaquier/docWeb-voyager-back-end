@@ -3,11 +3,11 @@
 
 namespace Config;
 
-require __DIR__ . '/../../vendor/autoload.php';
-
-use Config\PDOConnexion;
 use Config\dataBaseConnexion;
 use PDO;
+
+require __DIR__ . '/../../vendor/autoload.php';
+
 
 class GetEntireTable implements dataBaseConnexion
 {
@@ -22,18 +22,18 @@ class GetEntireTable implements dataBaseConnexion
 
     public function dbConnection()
     {
-        $pdoConnection = new PDOConnexion();
-        $this->pdo = $pdoConnection->connect();
+        $db = new PDOConnexion();
+        $this->pdo = $db->connect();
     }
+
+
 
     public function returnResponse()
     {
         $pdo = $this->pdo;
         try {
-            $stmt = $pdo->prepare("SELECT * FROM :table");
-            $stmt->execute([
-                'table' => $this->table
-            ]);
+            $stmt = $pdo->prepare("SELECT * FROM visual_content");
+            $stmt->execute();
             $response = $stmt->fetch(PDO::FETCH_ASSOC);
             return json_encode($response) ?: null;
         } catch (Exception $e) {

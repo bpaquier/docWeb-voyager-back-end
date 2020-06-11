@@ -14,8 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Config\\": "src/config",
-            "Routes\\": "src/routes"
+            "Config\\": "src/config"
         }
     }
 }
