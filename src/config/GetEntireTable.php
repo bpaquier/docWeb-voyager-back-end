@@ -32,12 +32,10 @@ class GetEntireTable implements dataBaseConnexion
     {
 
         $pdo = $this->pdo;
-        $table = $this->table;
+        $sql = "SELECT * FROM" . $this->table;
         try {
-            $stmt = $pdo->prepare("SELECT * FROM :table");
-            $stmt->execute([
-                "table" => $table
-            ]);
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute();
             $response = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return json_encode($response) ?: null;
         } catch (Exception $e) {
