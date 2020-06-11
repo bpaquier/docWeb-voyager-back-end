@@ -59,6 +59,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
 
     $group->get('/journey', function(Request $request, Response $response) {
         $response->getBody()->write('hello');
+        return $response;
         /*$SqlConnexion = new GetEntireTable('the_journey');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
