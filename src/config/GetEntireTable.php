@@ -32,7 +32,7 @@ class GetEntireTable implements dataBaseConnexion
     {
 
         $pdo = $this->pdo;
-        $sql = "SELECT * FROM" . $this->table;
+        $sql = "SELECT * FROM " . $this->table;
         try {
             $stmt = $pdo->prepare($sql);
             $stmt->execute();
