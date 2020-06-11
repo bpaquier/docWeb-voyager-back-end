@@ -189,4 +189,4 @@ CREATE TABLE `custom-cwxn`.`the_journey` (
   `text_2` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))ENGINE=InnoDB;
 
-INSERT INTO `custom-cwxn`.`polaroids` (`id`,`text_1`, `text_2`) VALUES ('', 'NASA placed an amibitous message aboard Voyager 1 and 2, a kind of time capsule, intended to communicate a story of our world to extraterrestrials.','It is carried by a phonograph record, a gold-plated copper disk called “The Golden Record“ containing what’s supposed to be the portray of the diversity of life and culture on Earth.');
+INSERT INTO `custom-cwxn`.`the_journey` (`id`,`text_1`, `text_2`) VALUES ('', 'NASA placed an amibitous message aboard Voyager 1 and 2, a kind of time capsule, intended to communicate a story of our world to extraterrestrials.','It is carried by a phonograph record, a gold-plated copper disk called “The Golden Record“ containing what’s supposed to be the portray of the diversity of life and culture on Earth.');
