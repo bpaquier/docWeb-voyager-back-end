@@ -31,7 +31,7 @@ $app->get('/test', function (Request $request, Response $response) {
 $app->group('/query', function (RouteCollectorProxy $group){
 
     $group->get('/visual_content', function(Request $request, Response $response) {
-        $SqlConnexion = new GetEntireTableAlias('');
+        $SqlConnexion = new GetEntireTableAlias('visual_content');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
