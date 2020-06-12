@@ -19,7 +19,9 @@ if ($_SERVER['SERVER_NAME'] === 'localhost'){
 }
 
 $app->get('/', function (Request $request, Response $response) {
-    $response->getBody()->write("voyager4");
+    $page = include_once __DIR__ . "/includes/header.php";
+
+    $response->getBody()->write($page);
     return $response;
 })->setName('Home');
 
