@@ -154,23 +154,23 @@ INSERT INTO `custom-cwxn`.`how_to_use_it` (`id`,`symbol`, `title`, `text_1`, `te
 
 
 DROP TABLE IF EXISTS polaroids;
-CREATE TABLE `custom-cwxn`.`polaroids` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(255) NULL,
-  `title` VARCHAR(255) NULL,
-  `text_1` VARCHAR(255) NULL,
-  `text_2` VARCHAR(255) NULL,
-  PRIMARY KEY (`id`))ENGINE=InnoDB;
+CREATE TABLE polaroids (
+  id INT NOT NULL AUTO_INCREMENT,
+  name TEXT NULL,
+  title TEXT NULL,
+  text_1 TEXT NULL,
+  text_2 TEXT NULL,
+  PRIMARY KEY (id))ENGINE=InnoDB;
 
-INSERT INTO `custom-cwxn`.`polaroids` (`id`,`name`,`title`, `text_1`, `text_2`) VALUES ('', 'ann-druyan', 'Lorem', 'Lorem ipsum', 'Lorem');
+INSERT INTO polaroids (name,title, text_1, text_2) VALUES ('ann-druyan', 'The pen of the project', 'Ann Druyan is an American journalist, writer, lecturer, director and producer, the late wife and widow of astronomer and writer Carl Sagan.', 'She is also involved in science popularization projects. In particular, she is co-author of the Cosmos series. /The chances of aliens finding the Voyagers in the vast emptiness of space are small—some say infinitesimal—but we took our jobs seriously, recalls team member Ann Druyan. /From the moment when Carl first broached the project to Tim Ferris and me, it felt mythic.');
 
-INSERT INTO `custom-cwxn`.`polaroids` (`id`,`name`,`title`, `text_1`, `text_2`) VALUES ('', 'carl-sagan', 'Chairman of the committee', 'He was an American astronomer, planetary scientist, cosmologist, astrophysicist, astrobiologist, author, science popularizer, and science communicator. He is best known as a science popularizer and communicator.','His best known scientific contribution is research on extraterrestrial life, including experimental demonstration of the production of amino acids from basic chemicals by radiation. Sagan assembled the first physical messages sent into space: the Pioneer plaque and the Voyager Golden Record, universal messages that could potentially be understood by any extraterrestrial intelligence that might find them.');
+INSERT INTO polaroids (name,title, text_1, text_2) VALUES ('carl-sagan', 'Chairman of the committee', 'He was an American astronomer, planetary scientist, cosmologist, astrophysicist, astrobiologist, author, science popularizer, and science communicator. He is best known as a science popularizer and communicator.','His best known scientific contribution is research on extraterrestrial life, including experimental demonstration of the production of amino acids from basic chemicals by radiation. Sagan assembled the first physical messages sent into space: the Pioneer plaque and the Voyager Golden Record, universal messages that could potentially be understood by any extraterrestrial intelligence that might find them.');
 
-INSERT INTO `custom-cwxn`.`polaroids` (`id`,`name`,`title`, `text_1`, `text_2`) VALUES ('', 'eward-c-stone', 'Ipsum', 'Ipsum lorem', 'Ipsum lorem');
+INSERT INTO polaroids (name,title, text_1, text_2) VALUES ('eward-c-stone', 'Inside the science', 'Edward Carroll Stone (born January 23, 1936) is an American space scientist, professor of physics at the California Institute of Technology, and former director of the NASA Jet Propulsion Laboratory (JPL).', 'As project scientist for the unmanned Voyager spacecraft missions to the outer Solar System since 1972, and a major spokesman for the Voyager science team, he became especially well known to the public in the 1980s. He has since been principal investigator on nine NASA spacecraft missions and coinvestigator on five more.');
 
-INSERT INTO `custom-cwxn`.`polaroids` (`id`,`name`, `title`, `text_1`, `text_2`) VALUES ('', 'jon-lomberg', 'Ipsum', 'Ipsum lorem', 'Ipsum ipsum ipsum lorem lorem');
+INSERT INTO polaroids (name, title, text_1, text_2) VALUES ('jon-lomberg', 'The artist', 'Jon Lomberg (born 1948) is an American space artist and science journalist. He was Carl Sagan''s principal artistic collaborator for more than twenty years on many projects from 1972 through 1996. In 1998, the International Astronomical Union officially named an asteroid (6446 Lomberg) in recognition of his achievements in science communication.', 'In 1972, Lomberg showed some of his paintings to astronomer Carl Sagan, who then asked him to illustrate The Cosmic Connection. This was the beginning of their quarter century of collaboration on many projects, including the NASA\'s interstellar Voyager Golden Record');
 
-INSERT INTO `custom-cwxn`.`polaroids` (`id`,`name`, `title`, `text_1`, `text_2`) VALUES ('', 'frank-drake', 'Ipsum', 'Ipsum lorem', 'Ipsum lorem');
+INSERT INTO polaroids (name, title, text_1, text_2) VALUES ('frank-drake', 'DJsigner Frank', 'Frank Drake (born May 28, 1930 in Chicago) is an American astronomer. Founder of the SETI (Search for Extra-Terrestrial Intelligence) project, he is the author of the famous Drake equation. Drake co-designed the Pioneer plaque with Carl Sagan in 1972, the first physical message sent into space. The plaque was designed to be understandable by extraterrestrials should they encounter it.', 'He later supervised the creation of the Voyager Golden Record. He was elected to the American Academy of Arts and Sciences in 1974.');
 
 DROP TABLE IF EXISTS audio_content;
 CREATE TABLE `custom-cwxn`.`audio_content` (
