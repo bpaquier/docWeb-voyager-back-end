@@ -41,14 +41,6 @@ $app->group('/query', function (RouteCollectorProxy $group){
         return $response;
     })->setName('team');
 
-    $group->get('/audio_content', function(Request $request, Response $response) {
-        $SqlConnexion = new GetEntireTable('audio_content');
-        $SqlConnexion->dbConnection();
-        $data = $SqlConnexion->returnResponse();
-        $response->getBody()->write($data);
-        return $response;
-    })->setName('audio_content');
-
     $group->get('/how_use', function(Request $request, Response $response) {
         $SqlConnexion = new GetEntireTable('how_to_use_it');
         $SqlConnexion->dbConnection();
@@ -57,13 +49,6 @@ $app->group('/query', function (RouteCollectorProxy $group){
         return $response;
     })->setName('How-to-use-it');
 
-    $group->get('/journey', function(Request $request, Response $response) {
-        $SqlConnexion = new GetEntireTable('journey');
-        $SqlConnexion->dbConnection();
-        $data = $SqlConnexion->returnResponse();
-        $response->getBody()->write($data);
-        return $response;
-    })->setName('journey');
 });
 
 $app->run();
