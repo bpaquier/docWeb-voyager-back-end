@@ -19,18 +19,9 @@ if ($_SERVER['SERVER_NAME'] === 'localhost'){
 }
 
 $app->get('/', function (Request $request, Response $response) {
-    $page = include_once __DIR__ . "/includes/header.php";
-
-    $response->getBody()->write($page);
+    $response->getBody()->write('test');
     return $response;
 })->setName('Home');
-
-$app->get('/test', function (Request $request, Response $response) {
-    $page = include_once __DIR__ . "/includes/test.php";
-
-    $response->getBody()->write($page);
-    return $response;
-})->setName('test');
 
 $app->group('/query', function (RouteCollectorProxy $group){
 
