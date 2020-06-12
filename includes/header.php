@@ -1,12 +1,7 @@
 <?php
  ?>
 
-<header>
- <nav>
-  <ul>
-   <li>hello</li>
-   <li>bonjour</li>
-   <li>coucou</li>
-  </ul>
- </nav>
-</header>
+<form method="POST" action="test.php">
+    <input type="text" name="test">
+    <input type="submit">
+</form>
