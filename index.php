@@ -49,6 +49,14 @@ $app->group('/query', function (RouteCollectorProxy $group){
         return $response;
     })->setName('How-to-use-it');
 
+    $group->get('/audio_content', function(Request $request, Response $response) {
+        $SqlConnexion = new GetEntireTable('audio_content');
+        $SqlConnexion->dbConnection();
+        $data = $SqlConnexion->returnResponse();
+        $response->getBody()->write($data);
+        return $response;
+    })->setName('audio_content);
+
 });
 
 $app->run();
