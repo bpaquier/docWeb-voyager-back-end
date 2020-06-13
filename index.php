@@ -55,7 +55,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $data = $SqlConnexion->returnResponse();
         $response->getBody()->write($data);
         return $response;
-    })->setName('audio_content);
+    })->setName('audio_content');
 
 });
 
