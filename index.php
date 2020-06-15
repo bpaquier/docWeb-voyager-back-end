@@ -29,6 +29,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $SqlConnexion = new GetEntireTable('visual_content');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
+        $response->withHeader("Access-Control-Allow-Origin", "*");
         $response->getBody()->write($data);
         return $response;
     })->setName('visual_content');
@@ -37,6 +38,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $SqlConnexion = new GetEntireTable('polaroids');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
+        $response->withHeader("Access-Control-Allow-Origin", "*");
         $response->getBody()->write($data);
         return $response;
     })->setName('team');
@@ -45,6 +47,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $SqlConnexion = new GetEntireTable('how_to_use_it');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
+        $response->withHeader("Access-Control-Allow-Origin", "*");
         $response->getBody()->write($data);
         return $response;
     })->setName('How-to-use-it');
@@ -53,6 +56,7 @@ $app->group('/query', function (RouteCollectorProxy $group){
         $SqlConnexion = new GetEntireTable('audio_content');
         $SqlConnexion->dbConnection();
         $data = $SqlConnexion->returnResponse();
+        $response->withHeader("Access-Control-Allow-Origin", "*");
         $response->getBody()->write($data);
         return $response;
     })->setName('audio_content');
