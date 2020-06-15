@@ -5,10 +5,10 @@ use PDO;
 
 class PDOConnexion
 {
-    private $db_host = "custom-cwxn.mysql.eu2.frbit.com";
-    private $db_user = 'custom-cwxn';
-    private $db_pass = 'hwKyT==4hociWMQ_B-fAQd=R';
-    private $db_name = 'custom-cwxn';
+    private $db_host = "custom-hvww.mysql.eu2.frbit.com";
+    private $db_user = 'custom-hvww';
+    private $db_pass = 'Kd20U-3oRGc06ua_1NCNspw';
+    private $db_name = 'custom-hvww';
 
     public function connect(){
         $mysql_connect_str = "mysql:host=$this->db_host;dbname=$this->db_name";

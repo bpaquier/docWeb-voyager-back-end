@@ -1,4 +1,3 @@
-
 DROP TABLE IF EXISTS visual_content;
 CREATE TABLE visual_content (
 	id INT(3) NOT NULL AUTO_INCREMENT,
@@ -130,27 +129,27 @@ INSERT INTO visual_content (src) VALUES
 ("https://github.com/bastien17-dev/docWeb-voyager-back-end/blob/master/assets/voyagerImg/images-golden-record-voyager-45.jpg?raw=true");
 
 DROP TABLE IF EXISTS how_to_use_it;
-CREATE TABLE `custom-cwxn`.`how_to_use_it` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `symbol` VARCHAR(255) NOT NULL,
-  `title` VARCHAR(255) NOT NULL,
-  `text_1` VARCHAR(255) NOT NULL,
-  `text_2` VARCHAR(255) NOT NULL,
+CREATE TABLE how_to_use_it (
+  id INT NOT NULL AUTO_INCREMENT,
+  symbol VARCHAR(255) NOT NULL,
+  title VARCHAR(255) NOT NULL,
+   text_1 VARCHAR(255) NOT NULL,
+  text_2 VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))ENGINE=InnoDB;
 
-INSERT INTO `custom-cwxn`.`how_to_use_it` (`id`,`symbol`, `title`, `text_1`, `text_2`) VALUES ('', 'record', 'Radial Circle', 'This circle represents the disc. Around this circle is defined a number in binary = 100 110,000 110,010,000,000,000,000,000,000,000, which corresponds to 5,113,380,864 in decimal.','
+INSERT INTO how_to_use_it (symbol, title, text_1, text_2) VALUES ('record','Radial Circle', 'This circle represents the disc. Around this circle is defined a number in binary = 100 110,000 110,010,000,000,000,000,000,000,000, which corresponds to 5,113,380,864 in decimal.','
 Multiplying this binary number by 0.7 nanoseconds gives 3.6 seconds as a result. 3.6 seconds is the rotation time of the disc on a lap.');
 
-INSERT INTO `custom-cwxn`.`how_to_use_it` (`id`,`symbol`, `title`, `text_1`, `text_2`) VALUES ('', 'elevation', 'View of side', 'This symbol is a representation of the disc in side view with the read head placed on it. It is accompanied by another number in binary which, converted to decimal, equal to 4 587 025 072 128.','This number multiplied by 0.7 nanoseconds gives the result of 3 229 seconds or 54.22 minutes: the total time of recording.');
+INSERT INTO how_to_use_it (symbol, title, text_1, text_2) VALUES ('elevation', 'View of side', 'This symbol is a representation of the disc in side view with the read head placed on it. It is accompanied by another number in binary which, converted to decimal, equal to 4 587 025 072 128.','This number multiplied by 0.7 nanoseconds gives the result of 3 229 seconds or 54.22 minutes: the total time of recording.');
 
-INSERT INTO `custom-cwxn`.`how_to_use_it` (`id`,`symbol`, `title`, `text_1`, `text_2`) VALUES ('', 'pulsar', 'Where we are ?', 'This symbol represents a pulsar map.', 'This map helping to explain our position in the universe by triangulating the distance from Earth to the 14 neutron stars closest to it.');
+INSERT INTO how_to_use_it (symbol, title, text_1, text_2) VALUES ('pulsar', 'Where we are ?', 'This symbol represents a pulsar map.', 'This map helping to explain our position in the universe by triangulating the distance from Earth to the 14 neutron stars closest to it.');
 
-INSERT INTO `custom-cwxn`.`how_to_use_it` (`id`,`symbol`, `title`, `text_1`, `text_2`) VALUES ('', 'frames', 'The images', 'This symbol follows the wave symbol. It is accompanied by a binary number: 512.
+INSERT INTO how_to_use_it (symbol, title, text_1, text_2) VALUES ('frames', 'The images', 'This symbol follows the wave symbol. It is accompanied by a binary number: 512.
 ', 'It should be understood that each section of data completes one of the 512 scan lines which form a complete image.');
 
-INSERT INTO `custom-cwxn`.`how_to_use_it` (`id`,`symbol`, `title`, `text_1`, `text_2`) VALUES ('', 'waves', 'How read the waves', 'This symbol shows when the waveform data should be broken down. Accompanied by a binary number : 11,845,632, if we multiply this binary number with our key figure : 0.7 nanoseconds, this gives us 0.008 seconds.', 'This means that each section takes 0.008 seconds to play.');
+INSERT INTO how_to_use_it (symbol, title, text_1, text_2) VALUES ('waves', 'How read the waves', 'This symbol shows when the waveform data should be broken down. Accompanied by a binary number : 11,845,632, if we multiply this binary number with our key figure : 0.7 nanoseconds, this gives us 0.008 seconds.', 'This means that each section takes 0.008 seconds to play.');
 
-INSERT INTO `custom-cwxn`.`how_to_use_it` (`id`,`symbol`, `title`, `text_1`, `text_2`) VALUES ('', 'hydrogen', 'The Key', 'This shema represents the tilting of the spin and the nucleus of hydrogen.', 'During this switchover, the hydrogen atom emits a wave of 0.7 nanoseconds. This figure is the key to deciphering the rest of the schemes.');
+INSERT INTO how_to_use_it (symbol, title, text_1, text_2) VALUES ('hydrogen', 'The Key', 'This shema represents the tilting of the spin and the nucleus of hydrogen.', 'During this switchover, the hydrogen atom emits a wave of 0.7 nanoseconds. This figure is the key to deciphering the rest of the schemes.');
 
 
 DROP TABLE IF EXISTS polaroids;
@@ -173,7 +172,7 @@ CREATE TABLE `custom-cwxn`.`audio_content` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `src` VARCHAR(255) NOT NULL,
   `name_playlist` VARCHAR(255) NOT NULL,
-  `name` VARCHAR(255) NOT NULL,
+`name` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))ENGINE=InnoDB;
 
 

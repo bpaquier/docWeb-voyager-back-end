@@ -1,11 +1,12 @@
 DROP TABLE IF EXISTS audio_content;
-CREATE TABLE audio_content {
-    id INT(3) NOT NULL AUTO_INCREMENT,
-    name_playlist VARCHAR(30) NOT NULL,
-    name_audio VARCHAR(250) NOT NULL,
-    src_audio TEXT NOT NULL,
-    PRIMARY KEY(id)
-}ENGINE=InnoDB;
+CREATE TABLE audio_content
+(
+    id            INT(3)       NOT NULL AUTO_INCREMENT,
+    name_playlist VARCHAR(30)  NOT NULL,
+    name_audio    VARCHAR(250) NOT NULL,
+    src_audio     TEXT         NOT NULL,
+    PRIMARY KEY (id)
+)ENGINE=InnoDB;
 
 INSERT INTO audio_content (name_playlist, name_audio,src_audio) VALUES ('greetings', 'Akkadian - "May all be very well."','https://raw.githubusercontent.com/quentintrouve/the_song_of_earth/master/greetings/akkadian.wav');
 INSERT INTO audio_content (name_playlist, name_audio,src_audio) VALUES ('greetings', 'Amoy - "Friends of space, how are you all ? Have you eaten yet ? Come visit us if you have time."','https://raw.githubusercontent.com/quentintrouve/the_song_of_earth/master/greetings/amoy.wav');
