@@ -19,7 +19,7 @@ if ($_SERVER['SERVER_NAME'] === 'localhost'){
 }
 
 $app->get('/', function (Request $request, Response $response) {
-    $response->getBody()->write('test');
+    $response->getBody()->write('Voyager API');
     return $response;
 })->setName('Home');
 
