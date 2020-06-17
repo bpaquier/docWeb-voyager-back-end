@@ -13,7 +13,7 @@ class GetEntireTable implements dataBaseConnexion
 {
 
     private string $table;
-    private $pdo;
+    private object $pdo;
 
     public function __construct(string $table)
     {
