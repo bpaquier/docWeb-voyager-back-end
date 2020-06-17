@@ -42,9 +42,9 @@ All queries to the api must be done starting from the */query* route
 |/how_use          | get all info for overlays in **Symbols** section  
 |/voyager         | get all info for texts in **Origin** section
 
-### Example 
+### example 
 ```shell
-https://custom-pcvp.frb.io/query/visual_content
+https://custom-76fy.frb.io/query/visual_content
 ```
 Return a JSON object with all urls images from the Gallery section
 
