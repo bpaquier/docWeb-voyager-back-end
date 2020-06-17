@@ -6,7 +6,7 @@ This project has been created for educational purposes as part of the Bachelor's
 
 ## 🛰️ Project Overview
 
-**Voyager Back-end** is a back-end application for a web documentary on the Golden Record. The front-end application is deployed [here](https://golden-record.netlify.app/). This repository contains the back-end application and has a database and API to access it. It is deployed on this url https://custom-pcvp.frb.io/.
+This repository is a back-end application for a web documentary on the Golden Record and has a database and an API. It is deployed on this url https://custom-pcvp.frb.io/.
 
 ## 📄 Getting Started
 
