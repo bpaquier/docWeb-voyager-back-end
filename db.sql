@@ -283,7 +283,24 @@ INSERT INTO audio_content (name_playlist, name_audio,src_audio) VALUES ('music',
 INSERT INTO audio_content (name_playlist, name_audio,src_audio) VALUES ('music', 'Beethoven - Otto Klemperer 5th, part 1','https://raw.githubusercontent.com/quentintrouve/the_song_of_earth/master/musics/24-beethoven-otto-klemperer-5th-part-1.mp3');
 INSERT INTO audio_content (name_playlist, name_audio,src_audio) VALUES ('music', 'Japan - Shakuhachi - Cranes in their nest','https://raw.githubusercontent.com/quentintrouve/the_song_of_earth/master/musics/25-japan-shakuhachi-cranes-in-their-nest.mp3');
 
+DROP TABLE IF EXISTS journey;
+CREATE TABLE journey
+(
+    id            INT(3)       NOT NULL AUTO_INCREMENT,
+    text_1 TEXT NOT NULL,
+    text_2  TEXT NOT NULL,
+    text_3  TEXT NOT NULL,
+    PRIMARY KEY (id)
+)ENGINE=InnoDB;
 
+INSERT INTO journey (text_1, text_2, text_3) VALUES ('NASA placed an amibitous message aboard Voyager 1 and 2, a kind of
+            time capsule, intended to communicate a story of our world to
+            extraterrestrials.','It is carried by a phonograph record, a
+            gold-plated copper disk called “The Golden Record“ containing what’s
+            supposed to be the portray of the diversity of life and culture on
+            Earth.','How intelligent life would be able to use this disk ? Press the
+            right arrow → to discover how scientists tried to answer this
+            question');
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
