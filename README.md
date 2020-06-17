@@ -1,22 +1,62 @@
+# The Golden Record - Back End
 
-# Adresse
+## 🎓Disclaimer
 
-# Le back-office
+This project has been created for educational purposes as part of the Bachelor's curriculum of the HETIC school. The contents presented have not been the subject of a request for right of use. **This site will and should in no case be used for commercial purposes and will not be published.**
 
-# Routes de l'API
+## 🛰️ Project Overview
 
-- /query
-  groupe de routes permettant de récupérer des données sur la DB:
+**Voyager Back-end** is a back-end application for a web documentary on the Golden Record. The front-end application is deployed [here](https://golden-record.netlify.app/). This repository contains the back-end application and has a database and API to access it. It is deployed [here](https://golden-record.netlify.app/).
 
-      /visual_content
-        route qui permet de récupérer les urls des 120 images pour la page 'Visual Content
-      /polaroids
-        route qui permet de récupérer le contenus des descritpions des membres de l'équipe à l'origine du Golden Records
-      /audio_content
-        route qui permet de récupérer les urls des différentes pistes audios
-      /how_use
-        route qui permet de récupérer le contenu des decriptions des différents symboles du Golden Record
+## 📄 Getting Started
 
-# Choix techniques
 
-# docWeb-voyager-back-end
+### Installing
+
+Clone the repository, and install the dependancies
+
+```
+git clone $url
+```
+
+```
+cd docWeb-voyager-back-end
+```
+
+```
+composer install
+```
+
+## 🚚 Routes
+<p align="center">
+  <img src="routes.png">
+</p>
+
+All queries to the api must be done starting from the */query* route
+
+|/query                |action                                                  |
+|----------------|-------------------------------|
+|/visual_content| get all urls for images in **Gallery** section                    
+|/polaroids          |get all info for cards in **Team** section     
+|/audio_content          |get all infos for sounds in **Sounds** section 
+|/how_use          | get all info for overlays in **Symbols** section  
+|/voyager         | get all info for texts in **Origin** section
+
+
+## 🔨 Built with
+
+Composer - [documentation](https://getcomposer.org/doc/)  
+Slim - [documentation](http://www.slimframework.com/)  
+
+
+## 🔗 Related repositories
+[Front-end](https://golden-record.netlify.app/)  
+[Back-office](https://custom-njhs.frb.io/index.php) 
+
+
+## 👥 Contributers
+
+Bastien Paquier - [bastien17-dev](https://github.com/bastien17-dev)  
+Quentin Grancher - [quentingrchr](https://github.com/quentingrchr)
+
+
