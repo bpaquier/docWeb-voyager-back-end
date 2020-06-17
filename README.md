@@ -50,8 +50,8 @@ Slim - [documentation](http://www.slimframework.com/)
 
 
 ## 🔗 Related repositories
-[Front-end](https://golden-record.netlify.app/)  
-[Back-office](https://custom-njhs.frb.io/index.php) 
+[Front-end](https://github.com/RedaHamouche/WebDocVuejs) 
+[Back-office](https://github.com/bastien17-dev/docWeb-voyager-back-office) 
 
 
 ## 👥 Contributers
