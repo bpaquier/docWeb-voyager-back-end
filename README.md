@@ -42,7 +42,7 @@ All queries to the api must be done starting from the */query* route
 |/how_use          | get all info for overlays in **Symbols** section  
 |/voyager         | get all info for texts in **Origin** section
 
-### example 
+### Example 
 ```shell
 https://custom-76fy.frb.io/query/visual_content
 ```
