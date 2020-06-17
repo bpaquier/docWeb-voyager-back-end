@@ -293,14 +293,7 @@ CREATE TABLE journey
     PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
-INSERT INTO journey (text_1, text_2, text_3) VALUES ('NASA placed an amibitous message aboard Voyager 1 and 2, a kind of
-            time capsule, intended to communicate a story of our world to
-            extraterrestrials.','It is carried by a phonograph record, a
-            gold-plated copper disk called “The Golden Record“ containing what’s
-            supposed to be the portray of the diversity of life and culture on
-            Earth.','How intelligent life would be able to use this disk ? Press the
-            right arrow → to discover how scientists tried to answer this
-            question');
+INSERT INTO journey (text_1, text_2, text_3) VALUES ('NASA placed an ambitious message aboard Voyager 1 and 2, a kind of time capsule, intended to communicate a story of our world to extraterrestrials.', 'It is carried by a phonograph record, a gold-plated copper disk called "The Golden Record" containing what\'s supposed to be the portray of the diversity of life and culture on Earth', 'How intelligent life would be able to use this disk ? Press the right arrow → to discover how scientists tried to answer this question ');
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
