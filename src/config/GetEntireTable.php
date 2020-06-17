@@ -20,7 +20,7 @@ class GetEntireTable implements dataBaseConnexion
         $this->table = $table;
     }
 
-    public function dbConnection()
+    public function dbConnection():void
     {
         $db = new PDOConnexion();
         $this->pdo = $db->connect();
@@ -28,7 +28,7 @@ class GetEntireTable implements dataBaseConnexion
 
 
 
-    public function returnResponse()
+    public function returnResponse():string
     {
 
         $pdo = $this->pdo;
