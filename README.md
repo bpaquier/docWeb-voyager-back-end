@@ -6,7 +6,7 @@ This project has been created for educational purposes as part of the Bachelor's
 
 ## 🛰️ Project Overview
 
-**Voyager Back-end** is a back-end application for a web documentary on the Golden Record. The front-end application is deployed [here](https://golden-record.netlify.app/). This repository contains the back-end application and has a database and API to access it. It is deployed [here](https://golden-record.netlify.app/).
+**Voyager Back-end** is a back-end application for a web documentary on the Golden Record. The front-end application is deployed [here](https://golden-record.netlify.app/). This repository contains the back-end application and has a database and API to access it. It is deployed on this url https://custom-pcvp.frb.io/.
 
 ## 📄 Getting Started
 
@@ -42,6 +42,11 @@ All queries to the api must be done starting from the */query* route
 |/how_use          | get all info for overlays in **Symbols** section  
 |/voyager         | get all info for texts in **Origin** section
 
+example: 
+```shell
+https://custom-pcvp.frb.io/query/visual_content
+```
+Return a JSON object with all urls images from the Gallery section
 
 ## 🔨 Built with
 
